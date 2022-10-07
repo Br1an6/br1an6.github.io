@@ -63,6 +63,7 @@
                         <li><a id="tab4" href="#tabs-4" role="tab" data-toggle="tab">PROJECTS</a></li>
                         <li><a id="tab5" href="#tabs-5" role="tab" data-toggle="tab">HONORS</a></li>
 			<li><a id="tab6" href="#tabs-6" role="tab" data-toggle="tab">PUBLICATION</a></li>
+			<li><a id="tab7" href="#tabs-7" role="tab" data-toggle="tab">PATENT</a></li>
                     </ul>
                     <div id="tabs" class="tab-content">
                         <div id="tabs-1" class="row tab-pane fade in active">
@@ -77,6 +78,8 @@
                         </div>
 			<div id="tabs-6" class="row tab-pane fade">  
                         </div>
+			<div id="tabs-7" class="row tab-pane fade">  
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -106,6 +109,7 @@
         project();
         honors();
 	publication();
+	patent();
     });
 
 function aboutme() {             
@@ -193,7 +197,13 @@ function publication() {
 	'<p>GCASR 2018  Apr 2018</p>'+
         '</div>');
 };
-        
+function patent() {             
+    $("#tabs-7").append('<div class="col-md-8">'+
+	'<h4>Confidential</h4>'+
+	'<p>US Patent, Patent pending, Aug 2022</p>'+
+        '</div>');
+};
+
     $('#tab1').click(function () {
         type = 1 ;
     });
@@ -212,6 +222,9 @@ function publication() {
     });
     $('#tab6').click(function () {
         type = 6 ;
+    });
+    $('#tab7').click(function () {
+        type = 7 ;
     });
 
     $('#myTab').tabCollapse();
