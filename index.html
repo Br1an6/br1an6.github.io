@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style type="text/css">
-        body {
+       body {
             background-image: url(./image/iitcs.jpg);
             background-position: center center;
             background-repeat: no-repeat;
@@ -24,10 +24,53 @@
         }
         
         alphaDiv{
-			opacity: 0.3;
+        opacity: 0.3;
+        }
+
+        h1 {
+          font-size: 4em;
+          font-weight: bold;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .jumbotron h1, .jumbotron p {
+          animation: fadeIn 0.25s ease-in-out;
+        }
+
+        .jumbotron {
+          background: linear-gradient(
+            rgba(255, 255, 255, 0.8), 
+            rgba(255, 255, 255, 0.8)
+          ), url(./image/iitcs.jpg);
+          background-size: cover;
+          background-position: center;
+          border-radius: 15px;
+        }
+
+        a.btn-primary {
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a.btn-primary:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
         }
         
-        <!-- background-image: url(./image/Flat-Ocean.jpeg); -->
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
   </style>
   </head>
   <body id="body">
