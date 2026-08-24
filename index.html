@@ -9,8 +9,8 @@
 
     <title>Br1an</title>
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Personal website of Brian Liu. Security, Gen AI, Distributed Systems, 5G, and Networking.">
+    <meta name="author" content="Brian Liu">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -22,15 +22,12 @@
             background-attachment:fixed;
             background-size: cover;
         }
-        
-        alphaDiv{
-        opacity: 0.3;
-        }
 
         h1 {
           font-size: 4em;
           font-weight: bold;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          color: #2c3e50;
         }
 
         @keyframes fadeIn {
@@ -45,35 +42,94 @@
         }
 
         .jumbotron h1, .jumbotron p {
-          animation: fadeIn 0.25s ease-in-out;
+          animation: fadeIn 0.8s ease-out forwards;
         }
 
+        /* Glassmorphism Effect */
         .jumbotron {
-          background: linear-gradient(
-            rgba(255, 255, 255, 0.8), 
-            rgba(255, 255, 255, 0.8)
-          ), url(./image/iitcs.jpg);
-          background-size: cover;
-          background-position: center;
-          border-radius: 15px;
+          background: rgba(255, 255, 255, 0.65) !important;
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          margin-top: 20px;
         }
 
+        /* Modernized Buttons */
         a.btn-primary {
-          transition: background-color 0.3s ease, transform 0.3s ease;
+          background-color: #0056b3;
+          border: none;
+          border-radius: 30px;
+          padding: 10px 25px;
+          font-weight: bold;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
         }
 
         a.btn-primary:hover {
-          background-color: #0056b3;
-          transform: scale(1.05);
+          background-color: #004494;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
         }
-  </style>
+
+        /* Modernize Tabs (Pill shapes) */
+        .nav-tabs {
+          border-bottom: none;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+        
+        .nav-tabs > li {
+          float: none;
+        }
+
+        .nav-tabs > li > a {
+          border: none !important;
+          border-radius: 30px !important;
+          background-color: rgba(255, 255, 255, 0.5);
+          color: #333;
+          font-weight: bold;
+          transition: all 0.3s ease;
+        }
+
+        .nav-tabs > li > a:hover {
+          background-color: rgba(255, 255, 255, 0.9);
+          transform: translateY(-2px);
+        }
+
+        .nav-tabs > li.active > a, 
+        .nav-tabs > li.active > a:hover, 
+        .nav-tabs > li.active > a:focus {
+          background-color: #0056b3 !important;
+          color: white !important;
+          box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+        }
+
+        /* Fancy Profile Image */
+        .img-thumbnail {
+          border-radius: 50%;
+          border: 4px solid white;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+          transition: transform 0.3s ease;
+          object-fit: cover;
+          aspect-ratio: 1 / 1;
+        }
+        
+        .img-thumbnail:hover {
+          transform: scale(1.05) rotate(2deg);
+        }
+    </style>
   </head>
   <body id="body">
 
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="jumbotron" style="background:hsla(0, 100%, 100%, 0.8);"> <!-- for trans -->
+			<div class="jumbotron"> <!-- for trans -->
 				<h1 class="text-center">
 					Br1an
 				</h1>
@@ -84,7 +140,7 @@
                     <a class="btn btn-primary btn-large" href="https://blog.br1an.cc">Blog</a>
                     <a class="btn btn-primary btn-large" href="https://github.com/Br1an6">GitHub</a>
                     <a class="btn btn-primary btn-large" href="https://www.linkedin.com/in/brianyaliu">LinkedIn</a>
-                    <a class="btn btn-primary btn-large" href="Brian Liu Resume.pdf">CV</a></p>
+                    <a class="btn btn-primary btn-large" href="Brian Liu Resume.pdf">CV</a>
                 </p>
 			</div>
 		</div>
@@ -93,7 +149,7 @@
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <div class="jumbotron" style="background:hsla(0, 100%, 100%, 0.9);"> <!-- for trans -->
+                <div class="jumbotron"> <!-- for trans -->
                     <ul class="nav nav-tabs content-tabs" role="tablist" id="myTab">
                         <li class="active"><a id="tab1" href="#tabs-1" role="tab" data-toggle="tab">About Me</a></li>
                         <li><a id="tab2" href="#tabs-2" role="tab" data-toggle="tab">EXPERIENCE</a></li>
@@ -103,26 +159,140 @@
 			<li><a id="tab6" href="#tabs-6" role="tab" data-toggle="tab">PUBLICATION</a></li>
 			<li><a id="tab7" href="#tabs-7" role="tab" data-toggle="tab">PATENT</a></li>
                     </ul>
-                    <div id="tabs" class="tab-content">
+                                        <div id="tabs" class="tab-content">
                         <div id="tabs-1" class="row tab-pane fade in active">
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <div style="width:80%; overflow: hidden;">
+                                    <img class="img-thumbnail" src="./image/profile.jpg" alt="Brian Liu Profile Picture">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Brian Liu, Senior Software Development Engineer at Zscaler. Former software engineer at AWS and F5. Previously a researcher at the IIT-Security Lab with a focus on security, generative AI, distributed systems, and networking.</p>
+                                <p>Outside of work, I'm a passionate guitar and bass player, heavily into metal/rock. I also enjoy the peace of fishing and camping, tackling home improvement projects, and, of course, anything involving trucks. Most importantly, I love spending time with my family.</p>
+                                <p>Contact me at <a href="mailto:brianliuya@gmail.com" itemprop="email">email</a>.</p>
+                            </div>
                         </div>
                         <div id="tabs-2" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <h4>Sr. Software Development Engineer</h4>
+                                <p>Zscaler, Inc., Remote  Nov 2024 - Present</p>
+                                <h4>Software Development Engineer 2</h4>
+                                <p>Amazon Web Services, Inc., Sunnyvale, CA  Nov 2019 - Nov 2024</p>
+                                <h4>Software Engineer 2</h4>
+                                <p>F5 Networks, Inc., San Jose, CA  Jul 2018 - Nov 2019</p>
+                                <h4>Application Developer Intern</h4>
+                                <p>Kypher, LLC., St. Louis, MO  May 2017 - Aug 2017</p>
+                                <h4>Production Assistant</h4>
+                                <p>Illinois Institute of Technology, Chicago, IL  Jan 2017 - Dec 2017</p>
+                                <h4>Sonar Technician Seaman (Mandatory Military Service)</h4>
+                                <p>R.O.C. NAVY, FFG-934, Taiwan  Jul 2015 - Jun 2016 </p>
+                                <h4>Software Engineer</h4>
+                                <p>Moremote, Inc., Taipei, Taiwan  Jul 2014 - Jun 2015</p>
+                            </div>
                         </div>
                         <div id="tabs-3" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <p>Illinois Institute of Technology, Chicago, IL  Aug 2016- May 2018</p>
+                                <h4>Master of Science, Computer Science</h4>
+                                <h6>IIT-Security Lab</h6>
+                                <p>Chung Yuan Christian University, Taoyuan, Taiwan  Sep 2011- June 2015</p>
+                                <h4>Bachelor of Science, Computer Science</h4>
+                                <h6>CYCU Software Engineering Lab</h6>
+                            </div>
                         </div>
                         <div id="tabs-4" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <h4>BoreSight</h4>
+                                <h4>Go-pedalboard</h4>
+                                <h4>Ollama</h4>
+                                <h4>AI-pedalboard</h4>
+                                <h4>baby-logger</h4>
+                                <h4>Zscaler Internet Access</h4>
+                                <h4>Zscaler Data Fabric for Security</h4>
+                                <h4>AWS Shield</h4>
+                                <h4>Amazon Q</h4>
+                                <h4>YouCompleteMe (amazon version)</h4>
+                                <h4>AWS Virtual Private Cloud</h4>
+                                <h4>AWS Telco Network Builder</h4>
+                                <h4>AWS Private 5G</h4>
+                                <h4>Amazon Aurora</h4>
+                                <h4>F5 BIG-IP™ - PEM / SFC</h4>
+                                <h4>Distributed Virtual Time System for Embedded Linux Devices</h4>
+                                <h4>librdkafka Performance Multiprocessing</h4>
+                                <h4>TeraSort on Cloud</h4>
+                                <h4>System Benchmarking on Cloud</h4>
+                                <h4>Implementation and improvisation of Netplumber</h4>
+                                <h4>Machine Learning ISLR</h4>
+                                <h4>Synology port forwarding for MacOS</h4>
+                                <h4>CS port forwarding for MacOS</h4>
+                                <h4>Traffic Routing: Network Operator's VS User's Perspective</h4>
+                                <h4>Online Social Network Analysis</h4>
+                                <h4>Scheme Interpreter</h4>
+                                <h4>Amoyly Xcode Themes</h4>
+                                <h4>Agnoster2 ZSH Theme</h4>
+                                <h4>FlipDashboard</h4>
+                                <h4>Ability Home Cam™</h4>
+                                <h4>BBcam™</h4>
+                                <h4>Blindout</h4>
+                                <h4>Optical Character Recognition</h4>
+                                <h4>iTipxy</h4>
+                                <h4>Interactive System in Class</h4>
+                                <br>
+                                <p>For more information, please visit my <a href="https://github.com/Br1an6">GitHub</a> or <a href="https://www.linkedin.com/in/brianyaliu">LinkedIn</a>.</p>
+                            </div>
                         </div>
                         <div id="tabs-5" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <h4>•  Awarded 2 Amazon inventor awards  2024</h4>
+                                <h4>•  Awarded 3 Amazon inventor awards  2022</h4>
+                                <h4>•  ACM SIGSIM-PADS Best Paper Award  2019</h4>
+                                <h4>•  Third place of CYCU Information and Computer Science departmental research project competition  2015</h4>
+                                <h4>•  Top eight final teams of International ICT Innovative Services Contest 2014  2014</h4>
+                                <h4>•  Excellence in Coursework Award  2012</h4>
+                            </div>
                         </div>
-			<div id="tabs-6" class="row tab-pane fade">  
+                        <div id="tabs-6" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <h4>A Distributed Virtual Time on Embedded System for Evaluating Cyber-Physical Systems</h4>
+                                <p>ACM SIGSIM-PADS 2019  May 2019</p>
+                                <h4>A Distributed Virtual Time System for Embedded Linux Devices</h4>
+                                <p>GCASR 2018  Apr 2018</p>
+                            </div>
                         </div>
-			<div id="tabs-7" class="row tab-pane fade">  
+                        <div id="tabs-7" class="row tab-pane fade">  
+                            <div class="col-md-8">
+                                <h4>Confidential</h4>
+                                <p>US Patent, Patent pending, Jun 2026</p>
+                                <h4>Confidential</h4>
+                                <p>US Patent, Patent pending, Jun 2026</p>
+                                <h4>Confidential</h4>
+                                <p>US Patent, Patent pending, Oct 2025</p>
+                                <h4>Confidential</h4>
+                                <p>US Patent, Patent pending, May 2025</p>
+                                <h4>Hybrid Automotive Cybersecurity Monitoring Service</h4>
+                                <p>US 2026/0247154 A1, Pending Feb 2025</p>
+                                <h4>Self-healing and resiliency in radio-based networks using a community model</h4>
+                                <p>US 11,888,701 B1, Patent pending, Jan 2024</p>
+                                <h4>Confidential</h4>
+                                <p>US Patent, Patent pending, Dec 2022</p>
+                                <h4>Enhancing availability of radio-based applications using multiple compute instances and virtualized network function accelerators at cloud edge locations</h4>
+                                <p>US 11,937,103 B1, Issued, Mar 2024</p>
+                            </div>
                         </div>    
                     </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Visitor Map Counter -->
+    <div class="text-center" style="margin-top: 20px; margin-bottom: 20px;">
+        <a title="free world map tracker" href="https://smallcounter.com/vmap/1787598449/">
+            <img title="free world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1787598449" border="0" alt="world map hits counter" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+        </a><br>
+    </div>
+
     <p class="text-center">
     	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
 	</p>
@@ -132,7 +302,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/bootstrap-tabcollapse.js"></script>
-    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5914234yw2a&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
         kofiWidgetOverlay.draw('br1an6', {
@@ -145,169 +314,9 @@
   </body>
 
 <script>
-
-    var type ;
-
     $(document).ready(function () {             
-        type = 1 ;
-        aboutme() ;
-        experience() ;
-        education() ;
-        project();
-        honors();
-	publication();
-	patent();
+        $('#myTab').tabCollapse();
+        $('#myTab a:first').tab('show');
     });
-
-function aboutme() {             
-    $("#tabs-1").append('<div class="col-xs-6 col-sm-4 col-md-3">'+
-        '<div style="width:80%; overflow: hidden;"><img class="img-thumbnail" src="./image/profile.jpg" overflow:hidden;"></div></div>'+
-        '<div class="col-md-8"><p>Brian Liu, Senior Software Development Engineer at Zscaler.' + 
-        ' Former software engineer at AWS and F5. Previously a researcher at the IIT-Security Lab with a focus on security, generative AI, distributed systems, and networking.</p>'+
-	'<p>Outside of work, I\'m a passionate guitar and bass player, heavily into metal/rock.' +
-	' I also enjoy the peace of fishing and camping,' +
-	' tackling home improvement projects, and, of course, anything involving trucks. Most importantly, I love spending time with my family.</p>'+
-        '<p> Contact me at '+ '<a href="mailto:brianliuya@gmail.com" itemprop="email">email</a>'+
-        '.</p>'+
-        ' </div>');
-};
-function experience() {             
-    $("#tabs-2").append('<div class="col-md-8">'+
-	'<h4>Sr. Software Development Engineer</h4>'+
-        '<p>Zscaler, Inc., Remote  Nov 2024 - Present</p>'+
-        '<h4>Software Development Engineer 2</h4>'+
-        '<p>Amazon Web Services, Inc., Sunnyvale, CA  Nov 2019 - Nov 2024</p>'+
-	'<h4>Software Engineer 2</h4>'+
-        '<p>F5 Networks, Inc., San Jose, CA  Jul 2018 - Nov 2019</p>'+
-        '<h4>Application Developer Intern</h4>'+
-        '<p>Kypher, LLC., St. Louis, MO  May 2017 - Aug 2017</p>'+
-        '<h4>Production Assistant</h4>'+
-        '<p>Illinois Institute of Technology, Chicago, IL  Jan 2017 - Dec 2017</p>'+
-        '<h4>Sonar Technician Seaman (Mandatory Military Service)</h4>'+
-        '<p>R.O.C. NAVY, FFG-934, Taiwan  Jul 2015 - Jun 2016 </p>'+
-        '<h4>Software Engineer</h4>'+
-        '<p>Moremote, Inc., Taipei, Taiwan  Jul 2014 - Jun 2015</p>'+
-        '</div>');
-};
-function education() {             
-    $("#tabs-3").append('<div class="col-md-8">' +
-        '<p>Illinois Institute of Technology, Chicago, IL  Aug 2016- May 2018</p>'+
-        '<h4>Master of Science, Computer Science</h4>'+
-	'<h6>IIT-Security Lab</h6>'+
-        '<p>Chung Yuan Christian University, Taoyuan, Taiwan  Sep 2011- June 2015</p>'+
-        '<h4>Bachelor of Science, Computer Science</h4>'+
-	'<h6>CYCU Software Engineering Lab</h6>'+
-        '</div>');
-};
-function project() {             
-    $("#tabs-4").append('<div class="col-md-8">'+
-	'<h4>BoreSight</h4>'+
-	'<h4>Go-pedalboard</h4>'+
-	'<h4>Ollama</h4>'+
-	'<h4>AI-pedalboard</h4>'+
-	'<h4>baby-logger</h4>'+
-	'<h4>Zscaler Internet Access</h4>'+
-	'<h4>Zscaler Data Fabric for Security</h4>'+
-	'<h4>AWS Shield</h4>'+
-	'<h4>Amazon Q</h4>'+
-	'<h4>YouCompleteMe (amazon version)</h4>'+
-	'<h4>AWS Virtual Private Cloud</h4>'+
-	'<h4>AWS Telco Network Builder</h4>'+
-	'<h4>AWS Private 5G</h4>'+
-	'<h4>Amazon Aurora</h4>'+
-        '<h4>F5 BIG-IP™ - PEM / SFC</h4>'+
-        '<h4>Distributed Virtual Time System for Embedded Linux Devices</h4>'+
-	'<h4>librdkafka Performance Multiprocessing</h4>'+
-        '<h4>TeraSort on Cloud</h4>'+
-        '<h4>System Benchmarking on Cloud</h4>'+
-        '<h4>Implementation and improvisation of Netplumber</h4>'+
-        '<h4>Machine Learning ISLR</h4>'+
-        '<h4>Synology port forwarding for MacOS</h4>'+
-        '<h4>CS port forwarding for MacOS</h4>'+
-        '<h4>Traffic Routing: Network Operator\'s VS User\'s Perspective</h4>'+
-        '<h4>Online Social Network Analysis</h4>'+
-        '<h4>Scheme Interpreter</h4>'+
-        '<h4>Amoyly Xcode Themes</h4>'+
-        '<h4>Agnoster2 ZSH Theme</h4>'+
-        '<h4>FlipDashboard</h4>'+
-        '<h4>Ability Home Cam™</h4>'+
-        '<h4>BBcam™</h4>'+
-        '<h4>Blindout</h4>'+
-        '<h4>Optical Character Recognition</h4>'+
-        '<h4>iTipxy</h4>'+
-        '<h4>Interactive System in Class</h4>'+
-        '<br></br><p>For more information, please visit my ' + 
-        '<a href="https://github.com/Br1an6">GitHub</a>'+' or '+'<a href="https://www.linkedin.com/in/brianyaliu">LinkedIn</a>'+'.</p>'+
-        '</div>');
-};
-function honors() {             
-    $("#tabs-5").append('<div class="col-md-8">'+
-	'<h4>•  Awarded 2 Amazon inventor awards  2024</h4>'+
-	'<h4>•  Awarded 3 Amazon inventor awards  2022</h4>'+
-	'<h4>•  ACM SIGSIM-PADS Best Paper Award  2019</h4>'+
-        '<h4>•  Third place of CYCU Information and Computer Science departmental research project competition  2015</h4>'+
-        '<h4>•  Top eight final teams of International ICT Innovative Services Contest 2014  2014</h4>'+
-        '<h4>•  Excellence in Coursework Award  2012</h4>'+
-        '</div>');
-};
-function publication() {             
-    $("#tabs-6").append('<div class="col-md-8">'+
-	'<h4>A Distributed Virtual Time on Embedded System for Evaluating Cyber-Physical Systems</h4>'+
-	'<p>ACM SIGSIM-PADS 2019  May 2019</p>'+
-        '<h4>A Distributed Virtual Time System for Embedded Linux Devices</h4>'+
-	'<p>GCASR 2018  Apr 2018</p>'+
-        '</div>');
-};
-function patent() {             
-    $("#tabs-7").append('<div class="col-md-8">'+
-	'<h4>Confidential</h4>'+
-	'<p>US Patent, Patent pending, Jun 2026</p>'+
-	'<h4>Confidential</h4>'+
-	'<p>US Patent, Patent pending, Jun 2026</p>'+
-	'<h4>Confidential</h4>'+
-	'<p>US Patent, Patent pending, Oct 2025</p>'+
-	'<h4>Confidential</h4>'+
-	'<p>US Patent, Patent pending, May 2025</p>'+
-	'<h4>Hybrid Automotive Cybersecurity Monitoring Service</h4>'+
-	'<p>US 2026/0247154 A1, Pending Feb 2025</p>'+
-	'<h4>Self-healing and resiliency in radio-based networks using a community model</h4>'+
-	'<p>US 11,888,701 B1, Patent pending, Jan 2024</p>'+
-	'<h4>Confidential</h4>'+
-	'<p>US Patent, Patent pending, Dec 2022</p>'+
-	'<h4>Enhancing availability of radio-based applications using multiple compute instances and virtualized network function accelerators at cloud edge locations</h4>'+
-	'<p>US 11,937,103 B1, Issued, Mar 2024</p>'+
-        '</div>');
-};
-
-    $('#tab1').click(function () {
-        type = 1 ;
-    });
-
-    $('#tab2').click(function () {
-        type = 2 ;
-    });
-    $('#tab3').click(function () {
-        type = 3 ;
-    });
-    $('#tab4').click(function () {
-        type = 4 ;
-    });
-    $('#tab5').click(function () {
-        type = 5 ;
-    });
-    $('#tab6').click(function () {
-        type = 6 ;
-    });
-    $('#tab7').click(function () {
-        type = 7 ;
-    });
-
-    $('#myTab').tabCollapse();
-
-    $(function () {
-        $('#myTab a:first').tab('show') ;
-    });
-
 </script>
-
 </html>
