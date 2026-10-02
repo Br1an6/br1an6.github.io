@@ -1,1 +1,325 @@
-# Empty CSS file for your own CSS
+/* Brian Liu - Personal Website Styles */
+
+html {
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    background-image: url(../image/iitcs.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #2c3e50;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Staggered Entrance Animations */
+.hero-title {
+    animation: fadeInDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-tagline {
+    opacity: 0;
+    animation: fadeInDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.hero-buttons {
+    opacity: 0;
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.main-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+}
+
+/* Glassmorphism Effect */
+.jumbotron {
+    background: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 20px;
+    overflow: visible;
+}
+
+/* Modernized Action Buttons */
+a.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}
+
+a.btn-primary:hover {
+    background-color: #004494;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
+}
+
+.btn-icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+/* Modernize Tabs (Pill shapes) */
+.nav-tabs {
+    border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-tabs > li {
+    float: none;
+}
+
+.nav-tabs > li > a {
+    border: none !important;
+    border-radius: 30px !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-weight: bold;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-tabs > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+    background-color: #0056b3 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Smooth Tab Content Transition */
+.tab-content {
+    min-height: 300px;
+    overflow: visible !important;
+    clear: both !important;
+    padding-bottom: 50px;
+}
+
+.tab-pane {
+    overflow: visible !important;
+    clear: both !important;
+}
+
+/* Prevent float clipping in single-column tabs */
+.tab-content > .tab-pane:not(#tabs-1) > div[class*="col-"] {
+    float: none;
+    width: 100%;
+    clear: both;
+}
+
+.tab-content::after,
+.tab-pane::after,
+.jumbotron::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ensure Ko-fi widget is always visible when loaded */
+.floatingchat-container-wrap {
+    display: block !important;
+}
+
+@keyframes tabSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.tab-pane.active {
+    animation: tabSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mouse-Following Spotlight (Linear/Stripe style) */
+.spotlight-card {
+    position: relative;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    background: radial-gradient(650px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(0, 136, 255, 0.14), transparent 45%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+.spotlight-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ambient Floating Mesh Orbs Wrapper */
+.ambient-glow-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.orb-1 {
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(0, 136, 255, 0.42) 0%, rgba(0, 86, 179, 0) 70%);
+    top: -80px;
+    right: 5%;
+    animation: orbFloat1 20s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 198, 255, 0.35) 0%, rgba(0, 114, 255, 0) 70%);
+    bottom: 5%;
+    left: -100px;
+    animation: orbFloat2 24s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(120, 160, 255, 0.3) 0%, rgba(30, 144, 255, 0) 70%);
+    top: 40%;
+    right: 30%;
+    animation: orbFloat3 18s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat1 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-80px, 90px) scale(1.1); }
+    100% { transform: translate(50px, 140px) scale(0.95); }
+}
+
+@keyframes orbFloat2 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(90px, -70px) scale(1.15); }
+    100% { transform: translate(-50px, -110px) scale(0.9); }
+}
+
+@keyframes orbFloat3 {
+    0% { transform: translate(0, 0) scale(0.95); }
+    50% { transform: translate(-60px, -50px) scale(1.12); }
+    100% { transform: translate(70px, 60px) scale(1); }
+}
+
+/* Interactive 3D Tilt */
+.tilt-element {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* Fancy Profile Image */
+.img-thumbnail {
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Accessible visually hidden element */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

@@ -1,142 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
-    <meta property="og:image" content="./image/icon.png" />
-    <link rel="shortcut icon" type="image/png" href="./image/icon.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Br1an</title>
-
-    <meta name="description" content="Personal website of Brian Liu. Security, Gen AI, Distributed Systems, 5G, and Networking.">
+    <title>Brian Liu | Br1an</title>
+    <meta name="description" content="Personal website of Brian Liu. Cybersecurity, Generative AI, Distributed Systems, 5G &amp; Networking.">
     <meta name="author" content="Brian Liu">
+    <link rel="shortcut icon" type="image/png" href="./image/icon.png">
+
+    <!-- Open Graph / Facebook / LinkedIn / Slack -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://br1an.cc/">
+    <meta property="og:title" content="Brian Liu">
+    <meta property="og:description" content="Cybersecurity, Generative AI, Distributed Systems, 5G &amp; Networking.">
+    <meta property="og:image" content="https://br1an.cc/image/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://br1an.cc/">
+    <meta name="twitter:title" content="Brian Liu">
+    <meta name="twitter:description" content="Cybersecurity, Generative AI, Distributed Systems, 5G &amp; Networking.">
+    <meta name="twitter:image" content="https://br1an.cc/image/og-preview.png">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <style type="text/css">
-        body {
-            background-image: url(./image/iitcs.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment:fixed;
-            background-size: cover;
-        }
-
-        h1 {
-          font-size: 4em;
-          font-weight: bold;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-          color: #2c3e50;
-        }
-
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .jumbotron h1, .jumbotron p {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        /* Glassmorphism Effect */
-        .jumbotron {
-          background: rgba(255, 255, 255, 0.65) !important;
-          backdrop-filter: blur(15px);
-          -webkit-backdrop-filter: blur(15px);
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          border-radius: 20px;
-          margin-top: 20px;
-        }
-
-        /* Modernized Buttons */
-        a.btn-primary {
-          background-color: #0056b3;
-          border: none;
-          border-radius: 30px;
-          padding: 10px 25px;
-          font-weight: bold;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
-        }
-
-        a.btn-primary:hover {
-          background-color: #004494;
-          transform: translateY(-3px);
-          box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
-        }
-
-        /* Modernize Tabs (Pill shapes) */
-        .nav-tabs {
-          border-bottom: none;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-          margin-bottom: 20px;
-        }
-        
-        .nav-tabs > li {
-          float: none;
-        }
-
-        .nav-tabs > li > a {
-          border: none !important;
-          border-radius: 30px !important;
-          background-color: rgba(255, 255, 255, 0.5);
-          color: #333;
-          font-weight: bold;
-          transition: all 0.3s ease;
-        }
-
-        .nav-tabs > li > a:hover {
-          background-color: rgba(255, 255, 255, 0.9);
-          transform: translateY(-2px);
-        }
-
-        .nav-tabs > li.active > a, 
-        .nav-tabs > li.active > a:hover, 
-        .nav-tabs > li.active > a:focus {
-          background-color: #0056b3 !important;
-          color: white !important;
-          box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
-        }
-
-        /* Fancy Profile Image */
-        .img-thumbnail {
-          border-radius: 50%;
-          border: 4px solid white;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-          transition: transform 0.3s ease;
-          object-fit: cover;
-          aspect-ratio: 1 / 1;
-        }
-        
-        .img-thumbnail:hover {
-          transform: scale(1.05) rotate(2deg);
-        }
-        /* Accessible visually hidden element */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-    </style>
   </head>
   <body id="body">
+
+    <!-- Ambient Floating Mesh Orbs -->
+    <div class="ambient-glow-wrapper" aria-hidden="true">
+        <div class="ambient-glow orb-1"></div>
+        <div class="ambient-glow orb-2"></div>
+        <div class="ambient-glow orb-3"></div>
+    </div>
 
     <div class="sr-only">
     Brian Yuan-An Liu is a Principal-level Software Engineer, Solutions Architect, and AI/Cybersecurity Specialist with 10+ years of experience designing mission-critical
@@ -151,41 +51,51 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="jumbotron"> <!-- for trans -->
-				<h1 class="text-center">
+			<div class="jumbotron spotlight-card"> <!-- for trans -->
+				<h1 class="text-center hero-title">
 					Br1an
 				</h1>
-				<p class="text-center">
-					Security, Gen AI, Distributed Systems, 5G, and Networking.
+				<p class="text-center hero-tagline" style="font-size: 1.25em; letter-spacing: 0.5px; color: #475569; font-weight: 500; margin-top: 15px; margin-bottom: 22px;">
+					Cybersecurity &nbsp;|&nbsp; Generative AI &nbsp;|&nbsp; Distributed Systems &nbsp;|&nbsp; 5G &amp; Networking
 				</p>
-                <p class="text-center">
-                    <a class="btn btn-primary btn-large" href="https://blog.br1an.cc">Blog</a>
-                    <a class="btn btn-primary btn-large" href="https://github.com/Br1an6">GitHub</a>
-                    <a class="btn btn-primary btn-large" href="https://www.linkedin.com/in/brianyaliu">LinkedIn</a>
-                    <a class="btn btn-primary btn-large" href="Brian Liu Resume.pdf">CV</a>
+                <p class="text-center hero-buttons">
+                    <a class="btn btn-primary btn-large tilt-element" href="https://blog.br1an.cc">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog
+                    </a>
+                    <a class="btn btn-primary btn-large tilt-element" href="https://github.com/Br1an6">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub
+                    </a>
+                    <a class="btn btn-primary btn-large tilt-element" href="https://www.linkedin.com/in/brianyaliu">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>LinkedIn
+                    </a>
+                    <a class="btn btn-primary btn-large tilt-element" href="Brian Liu Resume.pdf">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>CV
+                    </a>
+                    <!-- <a class="btn btn-primary btn-large tilt-element" href="https://ko-fi.com/br1an6" target="_blank" rel="noopener noreferrer">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Buy Me ☕️
+                    </a> -->
                 </p>
 			</div>
 		</div>
 	</div>
 
-    <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <div class="jumbotron"> <!-- for trans -->
+                <div class="jumbotron main-card spotlight-card"> <!-- for trans -->
                     <ul class="nav nav-tabs content-tabs" role="tablist" id="myTab">
                         <li class="active"><a id="tab1" href="#tabs-1" role="tab" data-toggle="tab">👨🏻‍💻 About Me</a></li>
-                        <li><a id="tab2" href="#tabs-2" role="tab" data-toggle="tab">💼 EXPERIENCE</a></li>
-                        <li><a id="tab3" href="#tabs-3" role="tab" data-toggle="tab">🎓 EDUCATION</a></li>
-                        <li><a id="tab4" href="#tabs-4" role="tab" data-toggle="tab">🛠️ PROJECTS</a></li>
-                        <li><a id="tab5" href="#tabs-5" role="tab" data-toggle="tab">🏆 HONORS</a></li>
-			<li><a id="tab6" href="#tabs-6" role="tab" data-toggle="tab">📜 PUBLICATION</a></li>
-			<li><a id="tab7" href="#tabs-7" role="tab" data-toggle="tab">🧠 PATENT</a></li>
+                        <li><a id="tab2" href="#tabs-2" role="tab" data-toggle="tab">💼 Experience</a></li>
+                        <li><a id="tab3" href="#tabs-3" role="tab" data-toggle="tab">🎓 Education</a></li>
+                        <li><a id="tab4" href="#tabs-4" role="tab" data-toggle="tab">🛠️ Projects</a></li>
+                        <li><a id="tab5" href="#tabs-5" role="tab" data-toggle="tab">🏆 Honors</a></li>
+                        <li><a id="tab6" href="#tabs-6" role="tab" data-toggle="tab">📜 Publications</a></li>
+                        <li><a id="tab7" href="#tabs-7" role="tab" data-toggle="tab">🧠 Patents</a></li>
                     </ul>
                                         <div id="tabs" class="tab-content">
                         <div id="tabs-1" class="row tab-pane fade in active">
                             <div class="col-xs-6 col-sm-4 col-md-3">
                                 <div style="width:80%; overflow: hidden;">
-                                    <img class="img-thumbnail" src="./image/profile.jpg" alt="Brian Liu Profile Picture">
+                                    <img class="img-thumbnail tilt-element" src="./image/profile.jpg" alt="Brian Liu Profile Picture">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -200,20 +110,43 @@
                         </div>
                         <div id="tabs-2" class="row tab-pane fade">  
                             <div class="col-md-8">
-                                <h4>Sr. Staff Software Development Engineer</h4>
-                                <p>Zscaler, Inc., Remote  Nov 2024 - Present</p>
-                                <h4>Software Development Engineer 2</h4>
-                                <p>Amazon Web Services, Inc., Sunnyvale, CA  Nov 2019 - Nov 2024</p>
-                                <h4>Software Engineer 2</h4>
-                                <p>F5 Networks, Inc., San Jose, CA  Jul 2018 - Nov 2019</p>
-                                <h4>Application Developer Intern</h4>
-                                <p>Kypher, LLC., St. Louis, MO  May 2017 - Aug 2017</p>
-                                <h4>Production Assistant</h4>
-                                <p>Illinois Institute of Technology, Chicago, IL  Jan 2017 - Dec 2017</p>
-                                <h4>Sonar Technician Seaman (Mandatory Military Service)</h4>
-                                <p>R.O.C. NAVY, FFG-934, Taiwan  Jul 2015 - Jun 2016 </p>
-                                <h4>Software Engineer</h4>
-                                <p>Moremote, Inc., Taipei, Taiwan  Jul 2014 - Jun 2015</p>
+                                <h4>Zscaler, Inc. <small>Bay Area (Remote), CA &nbsp;•&nbsp; Nov 2024 - Present</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Senior Staff Software Development Engineer</strong> &nbsp;<span style="color: #666;">(2026 - Present)</span> <span class="label label-primary" style="font-size: 11px; vertical-align: middle; margin-left: 4px; font-weight: normal; background-color: #0056b3;">Double Promoted</span></div>
+                                    <div><strong>Senior Software Development Engineer</strong> &nbsp;<span style="color: #666;">(2024 - 2026)</span></div>
+                                </div>
+
+                                <h4>Amazon Web Services, Inc. (AWS) <small>Sunnyvale, CA &nbsp;•&nbsp; Nov 2019 - Nov 2024</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Software Development Engineer 2</strong> &nbsp;<span style="color: #666;">(2022 - 2024)</span></div>
+                                    <div><strong>Software Development Engineer 1</strong> &nbsp;<span style="color: #666;">(2019 - 2022)</span></div>
+                                </div>
+
+                                <h4>F5 Networks, Inc. <small>San Jose, CA &nbsp;•&nbsp; Jul 2018 - Nov 2019</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Software Engineer 2</strong> &nbsp;<span style="color: #666;">(2019 - 2019)</span></div>
+                                    <div><strong>Software Engineer 1</strong> &nbsp;<span style="color: #666;">(2018 - 2019)</span></div>
+                                </div>
+
+                                <h4>Kypher, LLC. <small>St. Louis, MO &nbsp;•&nbsp; May 2017 - Aug 2017</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Application Developer Intern</strong></div>
+                                </div>
+
+                                <h4>Illinois Institute of Technology <small>Chicago, IL &nbsp;•&nbsp; Jan 2017 - Dec 2017</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Production Assistant</strong></div>
+                                </div>
+
+                                <h4>R.O.C. NAVY, FFG-934 <small>Taiwan &nbsp;•&nbsp; Jul 2015 - Jun 2016</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Sonar Technician Seaman</strong> &nbsp;<span style="color: #666;">(Mandatory Military Service)</span></div>
+                                </div>
+
+                                <h4>Moremote, Inc. <small>Taipei, Taiwan &nbsp;•&nbsp; Jul 2014 - Jun 2015</small></h4>
+                                <div style="margin-left: 15px; margin-bottom: 20px; line-height: 1.8;">
+                                    <div><strong>Software Engineer</strong></div>
+                                </div>
                             </div>
                         </div>
                         <div id="tabs-3" class="row tab-pane fade">  
@@ -308,22 +241,20 @@
                         </div>    
                     </div>
                 </div>
-                </div>
             </div>
         </div>
-    </div>
     
-    <!-- Visitor Map Counter -->
-    <div class="text-center" style="margin-top: 20px; margin-bottom: 20px;">
-        <a title="world map tracker" href="https://smallcounter.com/vmap/1787598449/">
-            <img title="world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1787598449" border="0" alt="world map hits counter" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
-        </a><br>
-    </div>
+        <!-- Visitor Map Counter -->
+        <div class="text-center" style="margin-top: 30px; margin-bottom: 20px;">
+            <a title="world map tracker" href="https://smallcounter.com/vmap/1787598449/">
+                <img title="world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1787598449" border="0" alt="world map hits counter" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+            </a><br>
+        </div>
 
-    <p class="text-center">
-    	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
-	</p>
-</div>
+        <p class="text-center" style="margin-bottom: 30px;">
+        	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+	    </p>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
